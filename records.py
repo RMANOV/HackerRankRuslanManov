@@ -37,14 +37,37 @@ def breakingRecords(scores):
     # Write your code here
     max_break = 0
     min_break = 0
+    max_score = scores[0]
     for i in range(1, len(scores)):
-        if scores[i] > scores[i - 1]:
+        if scores[i] > max_score:
             max_score = scores[i]
             max_break += 1
-        elif scores[i] < scores[i - 1]:
+    min_score = scores[0]
+    for i in range(1, len(scores)):
+        if scores[i] < min_score:
             min_score = scores[i]
             min_break += 1
-    return max_break - 1, min_break
+    return max_break, min_break
+    # max_break = []
+    # min_break = []
+    # for i in range(1, len(scores)):
+    #     if scores[i] > scores[i - 1]:
+    #         max_score = scores[i]
+    #         max_break.append(max_score)
+    #     elif scores[i] < scores[i - 1]:
+    #         min_score = scores[i]
+    #         min_break.append(min_score)
+    # return len(max_break), len(min_break)
+    
+    
+    # for i in range(1, len(scores)):
+    #     if scores[i] > scores[i - 1]:
+    #         max_score = scores[i]
+    #         max_break += 1
+    #     elif scores[i] < scores[i - 1]:
+    #         min_score = scores[i]
+    #         min_break += 1
+    # return max_break - 1, min_break
 
 
 if __name__ == "__main__":
