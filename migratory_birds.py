@@ -31,8 +31,16 @@ import sys
 
 def migratoryBirds(arr):
     # Write your code here
-    min_id =[x for x in arr if arr.count(x) == max([arr.count(y) for y in arr])]
-    return min(min_id)
+    count_min = 0
+    minimum = 0
+    for i in range(1, 6):
+        count = arr.count(i)
+        if count > count_min:
+            count_min = count
+            minimum = i
+    return minimum
+    # min_id =[x for x in arr if arr.count(x) == max([arr.count(y) for y in arr])]
+    # return min(min_id)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
