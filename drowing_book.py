@@ -52,12 +52,6 @@ def pageCount(n, p):
     if p % 2 != 0:
         return min((p - 1) // 2, (n - p) // 2)
 
-
-    
-
-
-
-    
     # for i in range(n):
     #     n = int(n)
     #     p = int(p)
