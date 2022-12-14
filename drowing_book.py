@@ -45,17 +45,13 @@ def pageCount(n, p):
     p = int(p)
     if p == 1 or p == n:
         return 0
+    if p == n-1 and n % 2 == 0:
+        return 1
     if p % 2 == 0:
         return min(p // 2, (n - p) // 2)
     if p % 2 != 0:
         return min((p - 1) // 2, (n - p) // 2)
-    if p == n - 1 or p == n - 2:
-        return 1
-    if p == 2 or p == 3:
-        return 1
-    if p>3 and p<n-2:
-        return 2
-     
+
 
     
 
